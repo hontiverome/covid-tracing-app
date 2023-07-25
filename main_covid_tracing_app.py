@@ -15,6 +15,8 @@
 # import modules
 import tkinter
 from tkinter import messagebox, ttk
+# import csv
+import csv
 # import class
 from covid_form import covidForm
 class mainMenu:
@@ -49,10 +51,9 @@ class mainMenu:
         self.window.mainloop()
     # search method
     def searchFunction(self):
-    # Create an Object for the variables
         access=covidForm()
         search = None
-    # Determine the search value
+    # checks search input
         if access.firstName_input():
             search = access.firstName_input.get().lower()
         elif access.middleName_input():
@@ -71,6 +72,10 @@ class mainMenu:
             search = access.address_input.get().lower()
         elif access.email_input():
             search = access.email_input.get().lower()
+    # checks input
+        if not search:
+            messagebox.showerror("Data does not exist")
+            return
 
 # run the main menu
 start=mainMenu()
