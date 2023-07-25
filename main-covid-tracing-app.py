@@ -7,6 +7,9 @@
 # pseudocode
 # import tkinter app
 # create window
+# create the gui for the main menu
+    # button for the form
+    # button for the search
 # create the gui for each user input regarding
     # user first name
     # user middle name
