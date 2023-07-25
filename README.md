@@ -1,4 +1,4 @@
-# covid-tracing-app
+# COVID TRACING APP
 App for tracing COVID
 # CSV guide:
 ## For Symptoms:
