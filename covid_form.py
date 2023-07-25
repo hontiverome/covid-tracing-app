@@ -259,6 +259,3 @@ class covidForm:
             write.writerow(inputData)  # Write current entry data
         messagebox.showinfo("Data Registered", "Your Data has been Registered Successfully")
         self.window.destroy()
-        
-test=covidForm()
-test.run()
