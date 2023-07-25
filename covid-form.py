@@ -34,12 +34,16 @@ class covidForm:
         # title
         self.window.title("COVID-19 FORM")
         # size
-        self.window.geometry("850x850")
+        self.window.geometry("850x900")
+        #color
+        self.window.configure(bg='#8db5db')
         # create frame
         self.frame = tkinter.Frame(self.window)
         self.frame.pack()
+        self.frame.configure(bg='#95bfe6')
         self.frame_label = tkinter.LabelFrame(self.frame, text="Personal and Contact Information", font='Helvetica 12 bold')
         self.frame_label.grid (row=0, column=2, padx=15, pady=15)
+        self.frame_label.configure(bg='#a3d1fb')
         # create label and entry for user first name
         self.firstName_input = tkinter.Entry(self.frame_label, justify='center')
         self.firstName_input.grid(row=1, column=0)
@@ -95,8 +99,10 @@ class covidForm:
         # create 2ndframe
         self.frame2 = tkinter.Frame(self.window)
         self.frame2.pack()
+        self.frame2.configure(bg='#95bfe6')
         self.frame2_label = tkinter.LabelFrame(self.frame2, text="Emergency Contact", font='Helvetica 12 bold')
         self.frame2_label.grid (row=0, column=2, padx=15, pady=25)
+        self.frame2_label.configure(bg='#a3d1fb')
         # create label and entry for contact person name
         self.contactPersonName_input = tkinter.Entry(self.frame2_label, justify='center')
         self.contactPersonName_input.grid(row=1, column=0)
@@ -120,8 +126,10 @@ class covidForm:
         # create 3rdframe
         self.frame3 = tkinter.Frame(self.window)
         self.frame3.pack()
+        self.frame3.configure(bg='#95bfe6')
         self.frame3_label = tkinter.LabelFrame(self.frame3, text="Assessment", font='Helvetica 12 bold')
         self.frame3_label.grid (row=0, column=2, padx=15, pady=25)
+        self.frame3_label.configure(bg='#a3d1fb')
         # create label and radio buttons for vaccination status
         vacStat=tkinter.IntVar()
         self.vaccinationStatus1 = tkinter.Radiobutton(self.frame3_label, text='none            ', justify='center', font='Courier', variable=vacStat, value=1)
@@ -139,19 +147,19 @@ class covidForm:
         # create label and checkmarks for felt symptoms
         symptomsFelt1=tkinter.IntVar()
         self.symptomscFelt1 = tkinter.Checkbutton(self.frame3_label, text='fever', justify='left', font='Courier', variable=symptomsFelt1, onvalue=1, offvalue=0)
-        self.symptomscFelt1.place(x=300, y=40)
+        self.symptomscFelt1.place(x=280, y=40)
         symptomsFelt2=tkinter.IntVar()
         self.symptomscFelt2 = tkinter.Checkbutton(self.frame3_label, text='cough', justify='left', font='Courier', variable=symptomsFelt2, onvalue=1, offvalue=0)
-        self.symptomscFelt2.place(x=300, y=65)
+        self.symptomscFelt2.place(x=280, y=65)
         symptomsFelt3=tkinter.IntVar()
         self.symptomscFelt3 = tkinter.Checkbutton(self.frame3_label, text='headache', justify='left', font   ='Courier', variable=symptomsFelt3, onvalue=1, offvalue=0)
-        self.symptomscFelt3.place(x=300, y=90)
+        self.symptomscFelt3.place(x=280, y=90)
         symptomsFelt4=tkinter.IntVar()
         self.symptomscFelt4 = tkinter.Checkbutton(self.frame3_label, text='shortness of breath', justify='left', font='Courier', variable=symptomsFelt4, onvalue=1, offvalue=0)
-        self.symptomscFelt4.place(x=300, y=115)
+        self.symptomscFelt4.place(x=280, y=115)
         symptomsFelt5=tkinter.IntVar()
         self.symptomscFelt5 = tkinter.Checkbutton(self.frame3_label, text='common cold', justify='left', font='Courier', variable=symptomsFelt5, onvalue=1, offvalue=0)
-        self.symptomscFelt5.place(x=300, y=140)
+        self.symptomscFelt5.place(x=280, y=140)
         symptomsFelt6=tkinter.IntVar()
         self.symptomscFelt6 = tkinter.Checkbutton(self.frame3_label, text='sore throat', justify='left', font='Courier', variable=symptomsFelt6, onvalue=1, offvalue=0)
         self.symptomscFelt6.place(x=520, y=40)
@@ -171,9 +179,9 @@ class covidForm:
         symptomsFelt_label.grid (row=0, column=1, padx=120)
         # create label and radio buttons for exposure
         exposure=tkinter.IntVar()
-        self.exposure1 = tkinter.Radiobutton(self.frame3_label, text='yes', justify='center', font='Courier', variable=exposure, value=1)
+        self.exposure1 = tkinter.Radiobutton(self.frame3_label, text='yes   ', justify='center', font='Courier', variable=exposure, value=1)
         self.exposure1.grid(row=12, column=0)
-        self.exposure2 = tkinter.Radiobutton(self.frame3_label, text='no', justify='center', font='Courier', variable=exposure, value=2)
+        self.exposure2 = tkinter.Radiobutton(self.frame3_label, text='no    ', justify='center', font='Courier', variable=exposure, value=2)
         self.exposure2.grid(row=13, column=0)
         self.exposure3 = tkinter.Radiobutton(self.frame3_label, text='unsure', justify='center', font='Courier', variable=exposure, value=3)
         self.exposure3.grid(row=14, column=0)
@@ -181,16 +189,19 @@ class covidForm:
         exposure_label.grid (row=11, column=0)
         # create label and radio buttons for covid-19 test
         covidTest=tkinter.IntVar()
-        self.covidTest1 = tkinter.Radiobutton(self.frame3_label, text='no', justify='center', font='Courier', variable=covidTest, value=1)
+        self.covidTest1 = tkinter.Radiobutton(self.frame3_label, text='no           ', justify='center', font='Courier', variable=covidTest, value=1)
         self.covidTest1.grid(row=12, column=1)
         self.covidTest2 = tkinter.Radiobutton(self.frame3_label, text='yes, positive', justify='center', font='Courier', variable=covidTest, value=2)
         self.covidTest2.grid(row=13, column=1)
         self.covidTest3 = tkinter.Radiobutton(self.frame3_label, text='yes, negative', justify='center', font='Courier', variable=covidTest, value=3)
         self.covidTest3.grid(row=14, column=1)
-        self.covidTest4 = tkinter.Radiobutton(self.frame3_label, text='yes, pending', justify='center', font='Courier', variable=covidTest, value=4)
+        self.covidTest4 = tkinter.Radiobutton(self.frame3_label, text='yes, pending ', justify='center', font='Courier', variable=covidTest, value=4)
         self.covidTest4.grid(row=15, column=1)
         covidTest_label = tkinter.Label(self.frame3_label, text="Have you undergone a \ncovid-19 test the last 14 days?", font='Courier 11 bold', justify='center')
         covidTest_label.grid (column=1, row=11, padx=120)
+        # create submit button
+        self.submit = tkinter.Button(self.window, text="Submit")
+        self.submit.place(x=400, y=850)
     # test function
     def run(self):
         self.window.mainloop()
