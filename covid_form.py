@@ -87,8 +87,8 @@ class covidForm:
         address_label = tkinter.Label(self.frame_label, bg='#a3d1fb', text="Address", font='Courier 12')
         address_label.grid (row=3, column=2, padx=0)
         # create label and entry for user email
-        self.emailInput = tkinter.Entry(self.frame_label, justify='center')
-        self.emailInput.grid(row=4, column=3)
+        self.email_input = tkinter.Entry(self.frame_label, justify='center')
+        self.email_input.grid(row=4, column=3)
         email_label = tkinter.Label(self.frame_label, bg='#a3d1fb', text="E-mail", font='Courier 12')
         email_label.grid (row=3, column=3, padx=0)
         # create label and entry for user contact info
@@ -216,7 +216,7 @@ class covidForm:
         getGender=self.gender_input.get()
         getOccupation=self.occupation_input.get()
         getAddress=self.address_input.get()
-        getEmail=self.emailInput.get()
+        getEmail=self.email_input.get()
         getContactInfo=self.contactInfo_input.get()
         getContactPersonName=self.contactPersonName_input.get()
         getContactPersonRelation=self.contactPersonRelation_input.get()
