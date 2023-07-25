@@ -55,6 +55,11 @@ class covidForm:
         self.lastName_input.grid(row=1, column=2)
         lastName_label = tkinter.Label(self.frame_label, text="Last Name", font='Courier 12')
         lastName_label.grid (row=0, column=2, padx=15)
+        # create label for user age
+        self.age_input = tkinter.Entry(self.frame_label)
+        self.age_input.grid(row=1, column=3)
+        age_label = tkinter.Label(self.frame_label, text="Age", font='Courier 12')
+        age_label.grid (row=0, column=3, padx=55)
     def run(self):
         self.window.mainloop()
 
