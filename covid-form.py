@@ -87,13 +87,13 @@ class covidForm:
         address_label = tkinter.Label(self.frame_label, bg='#a3d1fb', text="Address", font='Courier 12')
         address_label.grid (row=3, column=2, padx=0)
         # create label and entry for user email
-        self.email_input = tkinter.Entry(self.frame_label, justify='center')
-        self.email_input.grid(row=4, column=3)
+        self.emailInput = tkinter.Entry(self.frame_label, justify='center')
+        self.emailInput.grid(row=4, column=3)
         email_label = tkinter.Label(self.frame_label, bg='#a3d1fb', text="E-mail", font='Courier 12')
         email_label.grid (row=3, column=3, padx=0)
         # create label and entry for user contact info
-        self.contact_info_input = tkinter.Entry(self.frame_label, justify='center')
-        self.contact_info_input.grid(row=4, column=4, pady=10)
+        self.contactInfo_input = tkinter.Entry(self.frame_label, justify='center')
+        self.contactInfo_input.grid(row=4, column=4, pady=10)
         contactInfo_label = tkinter.Label(self.frame_label, bg='#a3d1fb', text="Contact Info", font='Courier 12')
         contactInfo_label.grid (row=3, column=4, padx=0)
         # create 2ndframe
@@ -205,7 +205,34 @@ class covidForm:
     # test function
     def run(self):
         self.window.mainloop()
-
-
+    # register inputs
+    def register(self):
+        getFirstName=self.firstName_input.get()
+        getMiddleName=self.middleName_input.get()
+        getLastName=self.lastName_input.get()
+        getAge=self.age_input.get()
+        getBirthDate=self.birthDate_input.get()
+        getGender=self.gender_input.get()
+        getOccupation=self.occupation_input.get()
+        getAddress=self.address_input.get()
+        getEmail=self.emailInput.get()
+        getContactInfo=self.contactInfo_input.get()
+        getContactPersonName=self.contactPersonName_input.get()
+        getContactPersonRelation=self.contactPersonRelation_input.get()
+        getContactPersonContactInfo=self.contactPersonContactInfo_input.get()
+        getContactPersonEmail=self.contactPersonEmail_input.get()
+        getVaccinationStatusr=self.vacStat.get()
+        getSymptom1=self.symptomscFelt1.get()
+        getSymptom2=self.symptomscFelt2.get()
+        getSymptom3=self.symptomscFelt3.get()
+        getSymptom4=self.symptomscFelt4.get()
+        getSymptom5=self.symptomscFelt5.get()
+        getSymptom6=self.symptomscFelt6.get()
+        getSymptom7=self.symptomscFelt7.get()
+        getSymptom8=self.symptomscFelt8.get()
+        getSymptom9=self.symptomscFelt9.get()
+        getSymptom10=self.symptomscFelt10.get()
+        getExposure=self.exposure.get()
+        getcovidTest=self.covidTest.get()
 test=covidForm()
 test.run()
