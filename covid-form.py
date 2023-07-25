@@ -120,7 +120,7 @@ class covidForm:
         # create 3rdframe
         self.frame3 = tkinter.Frame(self.window)
         self.frame3.pack()
-        self.frame3_label = tkinter.LabelFrame(self.frame3, text="Emergency Contact", font='Helvetica 12 bold')
+        self.frame3_label = tkinter.LabelFrame(self.frame3, text="Assessment", font='Helvetica 12 bold')
         self.frame3_label.grid (row=0, column=2, padx=15, pady=25)
         
     # test function
