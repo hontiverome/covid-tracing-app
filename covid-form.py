@@ -45,49 +45,49 @@ class covidForm:
         self.firstName_input.grid(row=1, column=0)
         firstName_label = tkinter.Label(self.frame_label, text="First Name", font='Courier 12')
         firstName_label.grid (row=0, column=0, padx=15)
-        # create label for user middle name
+        # create label and entry for user middle name
         self.middleName_input = tkinter.Entry(self.frame_label)  
         self.middleName_input.grid(row=1, column=1)
         middleName_label = tkinter.Label(self.frame_label, text="Middle Name", font='Courier 12')
         middleName_label.grid (row=0, column=1, padx=15)
-        # create label for user last name
+        # create label and entry for user last name
         self.lastName_input = tkinter.Entry(self.frame_label)
         self.lastName_input.grid(row=1, column=2)
         lastName_label = tkinter.Label(self.frame_label, text="Last Name", font='Courier 12')
         lastName_label.grid (row=0, column=2, padx=15)
-        # create label for user age
+        # create label and entry for user age
         self.age_input = tkinter.Entry(self.frame_label)
         self.age_input.grid(row=1, column=3)
         age_label = tkinter.Label(self.frame_label, text="Age", font='Courier 12')
         age_label.grid (row=0, column=3, padx=50)
-        # create label for user birth date
+        # create label and entry for user birth date
         self.birthDate_input = tkinter.Entry(self.frame_label)
         self.birthDate_input.grid(row=1, column=4)
         birthDate_label = tkinter.Label(self.frame_label, text="Birth Date", font='Courier 12')
         birthDate_label.grid (row=0, column=4, padx=15)
         birthDate_blabel = tkinter.Label(self.frame_label, text="mm/dd/yy", font='Courier 8')
         birthDate_blabel.grid (row=2, column=4, padx=15)
-        # create label for user gender
+        # create label and entry for user gender
         self.gender_input = tkinter.Entry(self.frame_label)
         self.gender_input.grid(row=4, column=0)
         gender_label = tkinter.Label(self.frame_label, text="Gender", font='Courier 12')
         gender_label.grid (row=3, column=0, padx=15)
-        # create label for user occupation
+        # create label and entry for user occupation
         self.occupation_input = tkinter.Entry(self.frame_label)
         self.occupation_input.grid(row=4, column=1)
         occupation_label = tkinter.Label(self.frame_label, text="Occupation", font='Courier 12')
         occupation_label.grid (row=3, column=1, padx=0)
-        # create label for user address
+        # create label and entry for user address
         self.address_input = tkinter.Entry(self.frame_label)
         self.address_input.grid(row=4, column=2)
         address_label = tkinter.Label(self.frame_label, text="Address", font='Courier 12')
         address_label.grid (row=3, column=2, padx=0)
-        # create label for user email
+        # create label and entry for user email
         self.email_input = tkinter.Entry(self.frame_label)
         self.email_input.grid(row=4, column=3)
         email_label = tkinter.Label(self.frame_label, text="E-mail", font='Courier 12')
         email_label.grid (row=3, column=3, padx=0)
-        # create label for user contact info
+        # create label and entry for user contact info
         self.contact_info_input = tkinter.Entry(self.frame_label)
         self.contact_info_input.grid(row=4, column=4)
         contactInfo_label = tkinter.Label(self.frame_label, text="Contact Info", font='Courier 12')
