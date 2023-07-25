@@ -40,8 +40,12 @@ class covidForm:
         self.frame.pack()
         self.frame_label = tkinter.LabelFrame(self.frame, text="Personal and Contact Information")
         self.frame_label.grid (row=0, column=2, padx=15, pady=15)
-        # create label for user first name
-        
+        # create label and entry for user first name
+        self.firstName_input = tkinter.Entry(self.frame_label)
+        self.firstName_input.grid(row=1, column=0)
+        firstName_label = tkinter.Label(self.frame_label, text="First Name")
+        firstName_label.grid (row=0, column=0)
+        # create label for user middle name
         self.label1 = tkinter.Label(self.frame, text="First Name", font=("Arial", 12))
         
     def run(self):
