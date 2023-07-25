@@ -67,21 +67,26 @@ class covidForm:
         birthDate_label.grid (row=0, column=4, padx=15)
         birthDate_blabel = tkinter.Label(self.frame_label, text="mm/dd/yy", font='Courier 8')
         birthDate_blabel.grid (row=2, column=4, padx=15)
+        # create label for user gender
+        self.gender_input = tkinter.Entry(self.frame_label)
+        self.gender_input.grid(row=1, column=5)
+        gender_label = tkinter.Label(self.frame_label, text="Gender", font='Courier 12')
+        gender_label.grid (row=0, column=5, padx=15)
         # create label for user occupation
         self.occupation_input = tkinter.Entry(self.frame_label)
-        self.occupation_input.grid(row=4, column=0)
+        self.occupation_input.grid(row=4, column=1)
         occupation_label = tkinter.Label(self.frame_label, text="Occupation", font='Courier 12')
-        occupation_label.grid (row=3, column=0, padx=0)
+        occupation_label.grid (row=3, column=1, padx=0)
         # create label for user address
         self.address_input = tkinter.Entry(self.frame_label)
-        self.address_input.grid(row=4, column=1)
+        self.address_input.grid(row=4, column=2)
         address_label = tkinter.Label(self.frame_label, text="Address", font='Courier 12')
-        address_label.grid (row=3, column=1, padx=0)
+        address_label.grid (row=3, column=2, padx=0)
         # create label for user email
         self.email_input = tkinter.Entry(self.frame_label)
-        self.email_input.grid(row=4, column=2)
+        self.email_input.grid(row=4, column=3)
         email_label = tkinter.Label(self.frame_label, text="E-mail", font='Courier 12')
-        email_label.grid (row=3, column=2, padx=0)
+        email_label.grid (row=3, column=3, padx=0)
     # test function
     def run(self):
         self.window.mainloop()
