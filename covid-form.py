@@ -59,7 +59,20 @@ class covidForm:
         self.age_input = tkinter.Entry(self.frame_label)
         self.age_input.grid(row=1, column=3)
         age_label = tkinter.Label(self.frame_label, text="Age", font='Courier 12')
-        age_label.grid (row=0, column=3, padx=55)
+        age_label.grid (row=0, column=3, padx=50)
+        # create label for user birth date
+        self.birthDate_input = tkinter.Entry(self.frame_label)
+        self.birthDate_input.grid(row=1, column=4)
+        birthDate_label = tkinter.Label(self.frame_label, text="Birth Date", font='Courier 12')
+        birthDate_label.grid (row=0, column=4, padx=15)
+        birthDate_blabel = tkinter.Label(self.frame_label, text="mm/dd/yy", font='Courier 8')
+        birthDate_blabel.grid (row=2, column=4, padx=15)
+        # create label for user occupation
+        self.occupation_input = tkinter.Entry(self.frame_label)
+        self.occupation_input.grid(row=4, column=0)
+        occupation_label = tkinter.Label(self.frame_label, text="Occupation", font='Courier 12')
+        occupation_label.grid (row=3, column=0, padx=0)
+                # create label for user email
     def run(self):
         self.window.mainloop()
 
