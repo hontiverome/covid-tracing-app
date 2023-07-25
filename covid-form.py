@@ -34,7 +34,7 @@ class covidForm:
         # title
         self.window.title("COVID-19 FORM")
         # size
-        self.window.geometry("800x600")
+        self.window.geometry("800x650")
         # create frame
         self.frame = tkinter.Frame(self.window)
         self.frame.pack()
@@ -104,7 +104,7 @@ class covidForm:
         contactPersonName_label.grid(row=0, column=0, padx=15)
         # create label and entry for contact person relation
         self.contactPersonRelation_input = tkinter.Entry(self.frame2_label, justify='center')
-        self.contactPersonRelation_input.grid(row=1, column=1)
+        self.contactPersonRelation_input.grid(row=1, column=1, pady=20)
         contactPersonRelation_label = tkinter.Label(self.frame2_label, text="Relationship", font='Courier 12')
         contactPersonRelation_label.grid(row=0, column=1, padx=15)
         # create label and entry for contact person contact info
@@ -114,7 +114,7 @@ class covidForm:
         contactPersonContactInfo_label.grid(row=2, column=0, padx=15)
         # create label and entry for contact person e-mail address
         self.contactPersonEmail_input = tkinter.Entry(self.frame2_label, justify='center')
-        self.contactPersonEmail_input.grid(row=3, column=1)
+        self.contactPersonEmail_input.grid(row=3, column=1, pady=20)
         contactPersonEmail_label = tkinter.Label(self.frame2_label, text="E-mail", font='Courier 12')
         contactPersonEmail_label.grid(row=2, column=1, padx=15)
     # test function
