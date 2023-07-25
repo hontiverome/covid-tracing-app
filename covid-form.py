@@ -89,14 +89,14 @@ class covidForm:
         email_label.grid (row=3, column=3, padx=0)
         # create label and entry for user contact info
         self.contact_info_input = tkinter.Entry(self.frame_label, justify='center')
-        self.contact_info_input.grid(row=4, column=4)
+        self.contact_info_input.grid(row=4, column=4, pady=10)
         contactInfo_label = tkinter.Label(self.frame_label, text="Contact Info", font='Courier 12')
         contactInfo_label.grid (row=3, column=4, padx=0)
         # create 2ndframe
         self.frame2 = tkinter.Frame(self.window)
         self.frame2.pack()
         self.frame2_label = tkinter.LabelFrame(self.frame2, text="Emergency Contact", font='Helvetica 12 bold')
-        self.frame2_label.grid (row=0, column=2, padx=15, pady=15)
+        self.frame2_label.grid (row=0, column=2, padx=15, pady=25)
         # create label and entry for contact person name
         self.contactPersonName_input = tkinter.Entry(self.frame2_label, justify='center')
         self.contactPersonName_input.grid(row=1, column=0)
@@ -107,6 +107,11 @@ class covidForm:
         self.contactPersonRelation_input.grid(row=1, column=1)
         contactPersonRelation_label = tkinter.Label(self.frame2_label, text="Relationship", font='Courier 12')
         contactPersonRelation_label.grid(row=0, column=1, padx=15)
+        # create label and entry for contact person contact info
+        self.contactPersonContactInfo_input = tkinter.Entry(self.frame2_label, justify='center')
+        self.contactPersonContactInfo_input.grid(row=3, column=0)
+        contactPersonContactInfo_label = tkinter.Label(self.frame2_label, text="Contact Info", font='Courier 12')
+        contactPersonContactInfo_label.grid(row=2, column=0, padx=15)
                 
     # test function
     def run(self):
