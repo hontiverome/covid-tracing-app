@@ -28,17 +28,18 @@ class mainMenu:
         self.window.configure(bg='#8db5db')
         # label
         titleLabel = tkinter.Label(self.window, text="COVID-19 TRACE APP", fg="black" , bg="white", font=("Century Gothic", 40))
-        titleLabel.pack(pady=40)
+        titleLabel.pack(pady=45)
         # button for the form
         register_button = tkinter.Button(self.window, text="Open Form", bg="white", fg="black", command=self.openForm, width=30, height=2, font=("Century Gothic", 15))
         register_button.pack(pady=20)
         # search entry
         searchLabel=tkinter.Label(self.window, text="Search Function:", fg="black", bg="#8db5db", font=("Century Gothic", '9', "bold"))
-        searchLabel.place(x=250, y=250)
-        inputSearch = tkinter.Entry(self.window, width="30")
+        searchLabel.place(x=250, y=260)
+        inputSearch = tkinter.Entry(self.window, width="40")
         inputSearch.pack(pady=20)
-
         # button for search
+        searchButton=tkinter.Button(self.window, text="Search", bg="white", fg="black", width=8, height=1, font=("Century Gothic", 10))
+        searchButton.place(x=260, y=310)
     def openForm(self):
         open=covidForm()
         open.mainloop()
