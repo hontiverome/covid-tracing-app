@@ -35,4 +35,13 @@ class covidForm:
         self.window.title("COVID-19 FORM")
         # size
         self.window.geometry("800x600")
-   
+        self.frame = tkinter.Frame(self.window)
+        self.frame.pack(fill=tkinter.BOTH, expand=tkinter.YES)
+        # create label for user first name
+        self.label1 = tkinter.Label(self.frame, text="First Name", font=("Arial", 12))
+    def run(self):
+        self.window.mainloop()
+
+
+test=covidForm()
+test.run()
