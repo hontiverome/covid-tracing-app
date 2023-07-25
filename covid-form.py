@@ -133,7 +133,7 @@ class covidForm:
         self.vaccinationStatus.grid(row=4, column=0)
         self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='2nd booster shot', justify='left', font='Courier')
         self.vaccinationStatus.grid(row=5, column=0)
-        vaccinationStatus_label = tkinter.Label(self.frame3_label, text="Vaccination Status", font='Courier 12')
+        vaccinationStatus_label = tkinter.Label(self.frame3_label, text="Vaccination Status", font='Courier 12 bold')
         vaccinationStatus_label.grid (row=0, column=0, padx=15)
     # test function
     def run(self):
