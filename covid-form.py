@@ -179,6 +179,10 @@ class covidForm:
         self.exposure3.grid(row=14, column=0)
         exposure_label = tkinter.Label(self.frame3_label, text="Exposure to a \nprobable/confirmed/extreme\n symptom case the last 7 days?", font='Courier 11 bold', justify='center')
         exposure_label.grid (row=11, column=0)
+        # create label and radio buttons for covid-19 test
+        covidTest=tkinter.IntVar()
+        covidTest_label = tkinter.Label(self.frame3_label, text="Have you undergone a \ncovid-19 test the last 14 days?", font='Courier 11 bold', justify='center')
+        covidTest_label.grid (column=1, row=11, padx=120)
     # test function
     def run(self):
         self.window.mainloop()
