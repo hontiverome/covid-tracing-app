@@ -5,7 +5,7 @@
 # | FINAL PROJECT |
 
 # pseudocode
-# import tkinter app
+# import modules
 # create window
 # create the gui for the main menu
     # button for the form
