@@ -43,11 +43,13 @@ class covidForm:
         # create label and entry for user first name
         self.firstName_input = tkinter.Entry(self.frame_label)
         self.firstName_input.grid(row=1, column=0)
-        firstName_label = tkinter.Label(self.frame_label, text="First Name")
-        firstName_label.grid (row=0, column=0)
+        firstName_label = tkinter.Label(self.frame_label, text="First Name", font= ('Courier 12'))
+        firstName_label.grid (row=0, column=0, padx=15)
         # create label for user middle name
-        self.label1 = tkinter.Label(self.frame, text="First Name", font=("Arial", 12))
-        
+        self.middleName_input = tkinter.Entry(self.frame_label)  
+        self.middleName_input.grid(row=1, column=1)
+        middleName_label = tkinter.Label(self.frame_label, text="Middle Name", font= ('Courier 12'))
+        middleName_label.grid (row=0, column=1, padx=15)
     def run(self):
         self.window.mainloop()
 
