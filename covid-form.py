@@ -137,6 +137,18 @@ class covidForm:
         vaccinationStatus_label = tkinter.Label(self.frame3_label, text="Vaccination Status", font='Courier 12 bold')
         vaccinationStatus_label.grid (row=0, column=0, padx=15)
         # create label and checkmarks for felt symptoms
+        symptomsFelt1=tkinter.IntVar()
+        self.symptomsFelt1 = tkinter.Checkbutton(self.frame3_label, text='fever', justify='left', font='Courier', variable=symptomsFelt1, onvalue=1, offvalue=0)
+        self.symptomsFelt1.grid(row=1, column=1)
+        symptomsFelt2=tkinter.IntVar()
+        self.symptomsFelt2 = tkinter.Checkbutton(self.frame3_label, text='cough', justify='left', font='Courier', variable=symptomsFelt2, onvalue=1, offvalue=0)
+        self.symptomsFelt2.grid(row=2, column=1)
+        symptomsFelt3=tkinter.IntVar()
+        self.symptomsFelt3 = tkinter.Checkbutton(self.frame3_label, text='headache', justify='left', font   ='Courier', variable=symptomsFelt3, onvalue=1, offvalue=0)
+        self.symptomsFelt3.grid(row=3, column=1)
+        symptomsFelt4=tkinter.IntVar()
+        self.symptomsFelt4 = tkinter.Checkbutton(self.frame3_label, text='shortness of breath', justify='left', font='Courier', variable=symptomsFelt4, onvalue=1, offvalue=0)
+        self.symptomsFelt4.grid(row=4, column=1)
         symptomsFelt_label = tkinter.Label(self.frame3_label, text="Have you felt these symptoms the last 7 days?", font='Courier 11 bold')
         symptomsFelt_label.grid (row=0, column=1, padx=15)
     # test function
