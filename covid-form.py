@@ -69,9 +69,9 @@ class covidForm:
         birthDate_blabel.grid (row=2, column=4, padx=15)
         # create label for user gender
         self.gender_input = tkinter.Entry(self.frame_label)
-        self.gender_input.grid(row=1, column=5)
+        self.gender_input.grid(row=4, column=0)
         gender_label = tkinter.Label(self.frame_label, text="Gender", font='Courier 12')
-        gender_label.grid (row=0, column=5, padx=15)
+        gender_label.grid (row=3, column=0, padx=15)
         # create label for user occupation
         self.occupation_input = tkinter.Entry(self.frame_label)
         self.occupation_input.grid(row=4, column=1)
