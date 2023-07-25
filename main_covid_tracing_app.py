@@ -40,37 +40,29 @@ class mainMenu:
         inputSearch = tkinter.Entry(self.window, width="40")
         inputSearch.pack(pady=20)
         # button for search
-        searchButton=tkinter.Button(self.window, command=self.search_engine, text="Search", bg="white", fg="black", width=8, height=1, font=("Century Gothic", 10))
+        searchButton=tkinter.Button(self.window, command=self.searchFunction, text="Search", bg="white", fg="black", width=8, height=1, font=("Century Gothic", 10))
         searchButton.place(x=260, y=310)
     # opens covid form
     def openForm(self):
         open=covidForm()
-        open.mainloop()
+        open.run
     # runs main menu
-    def run(self):
+    def runMain(self):
         self.window.mainloop()
     # search method
     def searchFunction(self):
         access=covidForm()
         search = None
     # checks search input
-        if access.firstName_input():
+        if access.firstName_input.get():
             search = access.firstName_input.get().lower()
-        elif access.middleName_input():
+        elif access.middleName_input.get():
             search = access.middleName_input.get().lower()
-        elif access.lastName_input():
+        elif access.lastName_input.get():
             search = access.lastName_input.get().lower()
-        elif access.age_input():
-            search = access.age_input.get().lower()
-        elif access.gender_input():
-            search = access.gender_input.get().lower()
-        elif access.birthDate_input():
-            search = access.birthDate_input.get().lower()
-        elif access.occupation_input():
-            search = access.occupation_input.get().lower()
-        elif access.address_input():
+        elif access.address_input.get():
             search = access.address_input.get().lower()
-        elif access.email_input():
+        elif access.email_input.get():
             search = access.email_input.get().lower()
     # checks input
         if not search:
@@ -79,4 +71,4 @@ class mainMenu:
 
 # run the main menu
 start=mainMenu()
-start.run()
+start.runMain()
