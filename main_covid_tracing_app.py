@@ -48,7 +48,7 @@ class mainMenu:
     def run(self):
         self.window.mainloop()
     # search method
-    def search_engine(self):
+    def searchFunction(self):
     # Create an Object for the variables
         access=covidForm()
         search = None
