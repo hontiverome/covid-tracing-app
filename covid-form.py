@@ -236,6 +236,13 @@ class covidForm:
         getSymptom10=self.symptomsFelt10.get()
         getExposure=self.exposure.get()
         getCovidTest=self.covidTest.get()
+        # raises error if no input detected
+        if not getFirstName or not getMiddleName or not getLastName or not getAge or not getBirthDate or not getGender or not getOccupation or not getAddress or not getEmail or not getContactInfo or not getContactPersonName or not getContactPersonRelation or not getContactPersonContactInfo or not getContactPersonEmail or not getVaccinationStatusr or not getSymptom1 or not getSymptom2 or not getSymptom3 or not getSymptom4 or not getSymptom5 or not getSymptom6 or not getSymptom7 or not getSymptom8 or not getSymptom9 or not getSymptom10 or not getExposure or not getCovidTest:
+            messagebox.showerror("Error: Please Fill All Entry")    
+            return
+        # create data and label to be written in csv file
+        headerLabel=["First Name", "Middle Name", "Last Name", "Age", "Birth Date", "Gender", "Occupation", "Address", "E-mail", "Contact Info", "Contact Person Name", "Contact Person Relation", "Contact Person Contact Info", "Contact Person E-mail", "Vaccination Status", "Symptom 1", "Symptom 2", "Symptom 3", "Symptom 4", "Symptom 5", "Symptom 6", "Symptom 7", "Symptom 8", "Symptom 9", "Symptom 10", "Exposure", "Covid-19 Test"]
+        inputData=[getFirstName, getMiddleName, getLastName ,getAge, getBirthDate, getGender, getOccupation, getAddress, getEmail, getContactInfo, getContactPersonName, getContactPersonRelation, getContactPersonContactInfo, getContactPersonEmail, getVaccinationStatusr, getSymptom1, getSymptom2, getSymptom3, getSymptom4, getSymptom5, getSymptom6, getSymptom7, getSymptom8, getSymptom9, getSymptom10, getExposure, getCovidTest]
 
         
 test=covidForm()
