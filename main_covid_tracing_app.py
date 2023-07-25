@@ -33,6 +33,8 @@ class mainMenu:
         register_button = tkinter.Button(self.window, text="Open Form", bg="white", fg="black", command=self.openForm, width=30, height=2, font=("Century Gothic", 15))
         register_button.pack(pady=20)
         # search entry
+        searchLabel=tkinter.Label(self.window, text="Search Function:", fg="black", bg="#8db5db", font=("Century Gothic", '9', "bold"))
+        searchLabel.place(x=250, y=250)
         inputSearch = tkinter.Entry(self.window, width="30")
         inputSearch.pack(pady=20)
 
