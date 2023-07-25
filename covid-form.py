@@ -201,7 +201,7 @@ class covidForm:
         covidTest_label = tkinter.Label(self.frame3_label, bg='#a3d1fb', text="Have you undergone a \ncovid-19 test the last 14 days?", font='Courier 11 bold', justify='center')
         covidTest_label.grid (column=1, row=11, padx=120)
         # create submit button
-        self.submit = tkinter.Button(self.window, bg='#ffffff', text="Submit", command=self.register())
+        self.submit = tkinter.Button(self.window, bg='#ffffff', text="Submit", command=self.register)
         self.submit.place(x=400, y=850)
     # test function
     def run(self):
@@ -237,13 +237,29 @@ class covidForm:
         getExposure=self.exposure.get()
         getCovidTest=self.covidTest.get()
         # raises error if no input detected
-        if not getFirstName or not getMiddleName or not getLastName or not getAge or not getBirthDate or not getGender or not getOccupation or not getAddress or not getEmail or not getContactInfo or not getContactPersonName or not getContactPersonRelation or not getContactPersonContactInfo or not getContactPersonEmail or not getVaccinationStatusr or not getSymptom1 or not getSymptom2 or not getSymptom3 or not getSymptom4 or not getSymptom5 or not getSymptom6 or not getSymptom7 or not getSymptom8 or not getSymptom9 or not getSymptom10 or not getExposure or not getCovidTest:
+        if not getFirstName or not getMiddleName or not getLastName or not getAge or not getBirthDate or not getGender or not getOccupation or not getAddress or not getEmail or not getContactInfo or not getContactPersonName or not getContactPersonRelation or not getContactPersonContactInfo or not getContactPersonEmail or not getVaccinationStatusr  or not getExposure or not getCovidTest:
             messagebox.showerror("Error: Please Fill All Entry")    
             return
         # create data and label to be written in csv file
         headerLabel=["First Name", "Middle Name", "Last Name", "Age", "Birth Date", "Gender", "Occupation", "Address", "E-mail", "Contact Info", "Contact Person Name", "Contact Person Relation", "Contact Person Contact Info", "Contact Person E-mail", "Vaccination Status", "Symptom 1", "Symptom 2", "Symptom 3", "Symptom 4", "Symptom 5", "Symptom 6", "Symptom 7", "Symptom 8", "Symptom 9", "Symptom 10", "Exposure", "Covid-19 Test"]
         inputData=[getFirstName, getMiddleName, getLastName ,getAge, getBirthDate, getGender, getOccupation, getAddress, getEmail, getContactInfo, getContactPersonName, getContactPersonRelation, getContactPersonContactInfo, getContactPersonEmail, getVaccinationStatusr, getSymptom1, getSymptom2, getSymptom3, getSymptom4, getSymptom5, getSymptom6, getSymptom7, getSymptom8, getSymptom9, getSymptom10, getExposure, getCovidTest]
-
+        # check first if csv file exists
+        check = False
+        try:
+            with open("Registered_List.csv", "r") as List:
+                read = csv.reader(List)
+                if any(read):
+                    check = True
+        except FileNotFoundError:
+            pass
+        # write data in csv file
+        with open("Registered_List.csv", "a", newline="") as List:
+            write = csv.writer(List)
+            if not check:
+                write.writerow(headerLabel)  # Write label 
+            write.writerow(inputData)  # Write current entry data
+        messagebox.showinfo("Data Registered", "Your Data has been Registered Successfully")
+        self.window.destroy()
         
 test=covidForm()
 test.run()
