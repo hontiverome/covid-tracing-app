@@ -77,6 +77,11 @@ class covidForm:
         self.address_input.grid(row=4, column=1)
         address_label = tkinter.Label(self.frame_label, text="Address", font='Courier 12')
         address_label.grid (row=3, column=1, padx=0)
+        # create label for user email
+        self.email_input = tkinter.Entry(self.frame_label)
+        self.email_input.grid(row=4, column=2)
+        email_label = tkinter.Label(self.frame_label, text="E-mail", font='Courier 12')
+        email_label.grid (row=3, column=2, padx=0)
     # test function
     def run(self):
         self.window.mainloop()
