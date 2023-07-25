@@ -137,7 +137,8 @@ class covidForm:
         vaccinationStatus_label = tkinter.Label(self.frame3_label, text="Vaccination Status", font='Courier 12 bold')
         vaccinationStatus_label.grid (row=0, column=0, padx=15)
         # create label and checkmarks for felt symptoms
-        
+        symptomsFelt_label = tkinter.Label(self.frame3_label, text="Have you felt these symptoms the last 7 days?", font='Courier 11 bold')
+        symptomsFelt_label.grid (row=0, column=1, padx=15)
     # test function
     def run(self):
         self.window.mainloop()
