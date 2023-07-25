@@ -27,12 +27,15 @@ class mainMenu:
         # color
         self.window.configure(bg='#8db5db')
         # label
-        titleLabel = tkinter.Label(self.window, text="COVID-19 TRACE APP", fg="black" , bg="white", font=("Century Gothic", 30))
-        titleLabel.pack(pady=60)
+        titleLabel = tkinter.Label(self.window, text="COVID-19 TRACE APP", fg="black" , bg="white", font=("Century Gothic", 40))
+        titleLabel.pack(pady=40)
         # button for the form
         register_button = tkinter.Button(self.window, text="Open Form", bg="white", fg="black", command=self.openForm, width=30, height=2, font=("Century Gothic", 15))
-        register_button.pack(pady=50)
+        register_button.pack(pady=20)
         # search entry
+        inputSearch = tkinter.Entry(self.window, width="30")
+        inputSearch.pack(pady=20)
+
         # button for search
     def openForm(self):
         open=covidForm()
