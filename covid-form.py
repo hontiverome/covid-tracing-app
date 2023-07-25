@@ -34,7 +34,7 @@ class covidForm:
         # title
         self.window.title("COVID-19 FORM")
         # size
-        self.window.geometry("800x650")
+        self.window.geometry("800x750")
         # create frame
         self.frame = tkinter.Frame(self.window)
         self.frame.pack()
@@ -122,7 +122,19 @@ class covidForm:
         self.frame3.pack()
         self.frame3_label = tkinter.LabelFrame(self.frame3, text="Assessment", font='Helvetica 12 bold')
         self.frame3_label.grid (row=0, column=2, padx=15, pady=25)
-        
+        # create label and radio button for vaccination status
+        self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='none', justify='left', font='Courier')
+        self.vaccinationStatus.grid(row=1, column=0)
+        self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='1st dose', justify='left', font='Courier')
+        self.vaccinationStatus.grid(row=2, column=0)
+        self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='2nd dose', justify='left', font='Courier')
+        self.vaccinationStatus.grid(row=3, column=0)
+        self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='1st booster shot', justify='left', font='Courier')
+        self.vaccinationStatus.grid(row=4, column=0)
+        self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='2nd booster shot', justify='left', font='Courier')
+        self.vaccinationStatus.grid(row=5, column=0)
+        vaccinationStatus_label = tkinter.Label(self.frame3_label, text="Vaccination Status", font='Courier 12')
+        vaccinationStatus_label.grid (row=0, column=0, padx=15)
     # test function
     def run(self):
         self.window.mainloop()
