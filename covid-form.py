@@ -20,3 +20,9 @@
     # vaccination status
     # symptoms status
     # contact person details
+    
+# import modules
+import tkinter
+from tkinter import messagebox, ttk
+# import csv 
+import csv 
