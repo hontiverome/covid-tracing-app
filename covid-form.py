@@ -246,14 +246,14 @@ class covidForm:
         # check first if csv file exists
         check = False
         try:
-            with open("Registered_List.csv", "r") as List:
+            with open("registeredList.csv", "r") as List:
                 read = csv.reader(List)
                 if any(read):
                     check = True
         except FileNotFoundError:
             pass
         # write data in csv file
-        with open("Registered_List.csv", "a", newline="") as List:
+        with open("registeredList.csv", "a", newline="") as List:
             write = csv.writer(List)
             if not check:
                 write.writerow(headerLabel)  # Write label 
