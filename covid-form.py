@@ -25,4 +25,14 @@
 import tkinter
 from tkinter import messagebox, ttk
 # import csv 
-import csv 
+import csv
+# create class for covid form gui
+class covidForm:
+    def __init__(self):
+        # create window
+        self.window = tkinter.Tk()
+        # title
+        self.window.title("COVID-19 FORM")
+        # size
+        self.window.geometry("800x600")
+   
