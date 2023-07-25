@@ -7,22 +7,6 @@
 # pseudocode
 # import modules
 # create window
-# create the gui for the main menu
-    # button for the form
-    # button for the search
-# create the gui for each user input regarding
-    # user first name
-    # user middle name
-    # user last name
-    # user age
-    # user contact info
-    # use birth date
-    # user occupation 
-    # user email
-    # user address
-    # vaccination status
-    # symptoms status
-    # contact person details
 # create the gui for search function
     # search by first name
     # search by middle name
