@@ -9,4 +9,4 @@
 # create window
 # create the gui for the main menu
     # button for the form
-    # button for the search
+    # search entry
