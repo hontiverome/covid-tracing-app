@@ -92,6 +92,16 @@ class covidForm:
         self.contact_info_input.grid(row=4, column=4)
         contactInfo_label = tkinter.Label(self.frame_label, text="Contact Info", font='Courier 12')
         contactInfo_label.grid (row=3, column=4, padx=0)
+        # create 2ndframe
+        self.frame2 = tkinter.Frame(self.window)
+        self.frame2.pack()
+        self.frame2_label = tkinter.LabelFrame(self.frame2, text="Emergency Contact", font='Helvetica 12 bold')
+        self.frame2_label.grid (row=0, column=2, padx=15, pady=15)
+        # create label and entry for contact person name
+        self.contactPersonName_input = tkinter.Entry(self.frame2_label)
+        self.contactPersonName_input.grid(row=1, column=0)
+        contactPersonName_label = tkinter.Label(self.frame2_label, text="Contact Person Name", font='Courier 12')
+        contactPersonName_label.grid(row=0, column=0, padx=15)
     # test function
     def run(self):
         self.window.mainloop()
