@@ -112,7 +112,11 @@ class covidForm:
         self.contactPersonContactInfo_input.grid(row=3, column=0)
         contactPersonContactInfo_label = tkinter.Label(self.frame2_label, text="Contact Info", font='Courier 12')
         contactPersonContactInfo_label.grid(row=2, column=0, padx=15)
-                
+        # create label and entry for contact person e-mail address
+        self.contactPersonEmail_input = tkinter.Entry(self.frame2_label, justify='center')
+        self.contactPersonEmail_input.grid(row=3, column=1)
+        contactPersonEmail_label = tkinter.Label(self.frame2_label, text="E-mail", font='Courier 12')
+        contactPersonEmail_label.grid(row=2, column=1, padx=15)
     # test function
     def run(self):
         self.window.mainloop()
