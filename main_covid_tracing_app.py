@@ -38,13 +38,39 @@ class mainMenu:
         inputSearch = tkinter.Entry(self.window, width="40")
         inputSearch.pack(pady=20)
         # button for search
-        searchButton=tkinter.Button(self.window, text="Search", bg="white", fg="black", width=8, height=1, font=("Century Gothic", 10))
+        searchButton=tkinter.Button(self.window, command=self.search_engine, text="Search", bg="white", fg="black", width=8, height=1, font=("Century Gothic", 10))
         searchButton.place(x=260, y=310)
+    # opens covid form
     def openForm(self):
         open=covidForm()
         open.mainloop()
+    # runs main menu
     def run(self):
         self.window.mainloop()
+    # search method
+    def search_engine(self):
+    # Create an Object for the variables
+        access=covidForm()
+        search = None
+    # Determine the search value
+        if access.firstName_input():
+            search = access.firstName_input.get().lower()
+        elif access.middleName_input():
+            search = access.middleName_input.get().lower()
+        elif access.lastName_input():
+            search = access.lastName_input.get().lower()
+        elif access.age_input():
+            search = access.age_input.get().lower()
+        elif access.gender_input():
+            search = access.gender_input.get().lower()
+        elif access.birthDate_input():
+            search = access.birthDate_input.get().lower()
+        elif access.occupation_input():
+            search = access.occupation_input.get().lower()
+        elif access.address_input():
+            search = access.address_input.get().lower()
+        elif access.email_input():
+            search = access.email_input.get().lower()
 
 # run the main menu
 start=mainMenu()
