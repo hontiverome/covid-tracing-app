@@ -114,7 +114,7 @@ class covidForm:
         contactPersonContactInfo_label.grid(row=2, column=0, padx=15)
         # create label and entry for contact person e-mail address
         self.contactPersonEmail_input = tkinter.Entry(self.frame2_label, justify='center')
-        self.contactPersonEmail_input.grid(row=3, column=1, pady=20)
+        self.contactPersonEmail_input.gr    id(row=3, column=1, pady=20)
         contactPersonEmail_label = tkinter.Label(self.frame2_label, text="E-mail", font='Courier 12')
         contactPersonEmail_label.grid(row=2, column=1, padx=15)
         # create 3rdframe
@@ -122,7 +122,8 @@ class covidForm:
         self.frame3.pack()
         self.frame3_label = tkinter.LabelFrame(self.frame3, text="Assessment", font='Helvetica 12 bold')
         self.frame3_label.grid (row=0, column=2, padx=15, pady=25)
-        # create label and radio button for vaccination status
+        # create label and radio buttons for vaccination status
+        vacStat=tkinter.IntVar()
         self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='none            ', justify='center', font='Courier')
         self.vaccinationStatus.grid(row=1, column=0)
         self.vaccinationStatus = tkinter.Radiobutton(self.frame3_label, text='1st dose        ', justify='center', font='Courier')
@@ -135,6 +136,7 @@ class covidForm:
         self.vaccinationStatus.grid(row=5, column=0)
         vaccinationStatus_label = tkinter.Label(self.frame3_label, text="Vaccination Status", font='Courier 12 bold')
         vaccinationStatus_label.grid (row=0, column=0, padx=15)
+        # create label and radio buttons
     # test function
     def run(self):
         self.window.mainloop()
