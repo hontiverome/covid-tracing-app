@@ -240,7 +240,7 @@ class covidForm:
             messagebox.showerror("Error: Please Fill All Entry")    
             return
         # create data and label to be written in csv file
-        headerLabel=["First Name", "Middle Name", "Last Name", "Age", "Birth Date", "Gender", "Occupation", "Address", "E-mail", "Contact Info", "Contact Person Name", "Contact Person Relation", "Contact Person Contact Info", "Contact Person E-mail", "Vaccination Status", "Symptom 1", "Symptom 2", "Symptom 3", "Symptom 4", "Symptom 5", "Symptom 6", "Symptom 7", "Symptom 8", "Symptom 9", "Symptom 10", "Exposure", "Covid-19 Test"]
+        headerLabel=["First Name", "Middle Name", "Last Name", "Age", "Birth Date", "Gender", "Occupation", "Address", "E-mail", "Contact Info", "Contact Person Name", "Contact Person Relation", "Contact Person Contact Info", "Contact Person E-mail", "Vaccination Status", "Fever?", "Cough?", "Headache?", "Shortness of Breath?", "Common Cold", "Sore Throat", "Loss of Taste or Smell", "Diarrhea", "Muscle/Body Pains", "None", "Exposure", "Covid-19 Test"]
         inputData=[getFirstName, getMiddleName, getLastName ,getAge, getBirthDate, getGender, getOccupation, getAddress, getEmail, getContactInfo, getContactPersonName, getContactPersonRelation, getContactPersonContactInfo, getContactPersonEmail, getVaccinationStatusr, getSymptom1, getSymptom2, getSymptom3, getSymptom4, getSymptom5, getSymptom6, getSymptom7, getSymptom8, getSymptom9, getSymptom10, getExposure, getCovidTest]
         # check first if csv file exists
         check = False
