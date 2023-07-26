@@ -255,10 +255,10 @@ class covidForm:
         with open("registeredList.csv", "a", newline="") as List:
             write = csv.writer(List)
             if not check:
-                write.writerow(headerLabel)  # Write label 
-            write.writerow(inputData)  # Write current entry data
+                write.writerow(headerLabel)
+            write.writerow(inputData)
         messagebox.showinfo("Data Registered", "Your Data has been Registered Successfully")
         self.window.destroy()
 # run
-open=covidForm()
-open.run()
+covid_app=covidForm()
+covid_app.run()
