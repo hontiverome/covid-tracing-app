@@ -19,6 +19,7 @@ import csv
 # import class
 from covid_form import covidForm
 class mainMenu:
+    # initialize the main menu
     def __init__(self):
         self.window = tkinter.Tk()
         # title
@@ -36,33 +37,30 @@ class mainMenu:
         # search entry
         searchLabel=tkinter.Label(self.window, text="Search Function:", fg="black", bg="#8db5db", font=("Century Gothic", '9', "bold"))
         searchLabel.place(x=250, y=260)
-        inputSearch = tkinter.Entry(self.window, width="40")
-        inputSearch.pack(pady=20)
+        self.inputSearch = tkinter.Entry(self.window, width="40")
+        self.inputSearch.pack(pady=20)
         # button for search
         searchButton=tkinter.Button(self.window, command=self.searchFunction, text="Search", bg="white", fg="black", width=8, height=1, font=("Century Gothic", 10))
         searchButton.place(x=260, y=310)
+        
     # opens covid form
     def openForm(self):
         open=covidForm()
         open.run
+        
     # runs main menu
     def runMain(self):
+        
         self.window.mainloop()
     # search method
     def searchFunction(self):
-        access=covidForm()
-        search = None
+        match = []
+        record = {}
     # checks search input
-        if access.firstName_input.get():
-            search = access.firstName_input.get().lower()
-        elif access.middleName_input.get():
-            search = access.middleName_input.get().lower()
-        elif access.lastName_input.get():
-            search = access.lastName_input.get().lower()
-        elif access.address_input.get():
-            search = access.address_input.get().lower()
-        elif access.email_input.get():
-            search = access.email_input.get().lower()
+        #use for searching for keywords in the search entry
+        search = self.inputSearch.get().lower()
+        print("Searching for:", search)
+
     # checks input
         if not search:
             messagebox.showerror("Data does not exist")
