@@ -10,7 +10,6 @@
 # create window
 # create the gui for the main menu
     # button for the form
-    # search entry
     
 # import modules
 import tkinter
