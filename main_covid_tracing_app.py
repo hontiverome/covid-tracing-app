@@ -58,19 +58,19 @@ class mainMenu:
         search = self.inputSearch.get().lower()
         print("Searching for:", search)
 
-    # checks input
+      # checks input
         if not search:
             messagebox.showerror("Data does not exist")
             return
        
         dataFound = []
-    # reads csv file
+       # reads csv file
         with open("registeredList.csv", "r") as file:
             reader = csv.reader(file)
             header = next(reader) 
             for row in reader:
                 match = False
-    # checks each criteria
+      # checks each criteria
                 for field in row:
                     if search in field.lower():
                         match = True
