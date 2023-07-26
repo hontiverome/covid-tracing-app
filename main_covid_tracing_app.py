@@ -56,8 +56,7 @@ class mainMenu:
     def searchFunction(self):
         match = []
         record = {}
-    # checks search input
-        #use for searching for keywords in the search entry
+        # checks search input
         search = self.inputSearch.get().lower()
         print("Searching for:", search)
 
@@ -65,7 +64,47 @@ class mainMenu:
         if not search:
             messagebox.showerror("Data does not exist")
             return
+       
+        dataFound = []
+    # Read csv file
+        with open("registeredList.csv", "r") as file:
+            reader = csv.reader(file)
+            header = next(reader)   # Locate Headers in row
 
+            for row in reader:
+                match = False
+    # checks each criteria
+                for field in row:
+                    if search in field.lower():
+                        match = True
+                        break
+                if match:
+                    dataFound.append(row)
+        ## renaming
+        defvaccineStatus = {
+            1: "None",
+            2: "1st dose",
+            3: "2nd dose",
+            4: "1st booster shot",
+            5: "2nd booster shot",
+        }
+        if dataFound:
+            for entry in dataFound:
+                dataV=[int(val) for val in {entry[10]}.split() ] 
+                dataVacStat=[defvaccineStatus[val] for val in dataV]
+    # show result
+        if dataFound:
+            results = "\n".join(
+                [
+                    f"\tPersonal Information: \n Name: {entry[0]} {entry[1]} {entry[2]}\t Age: {entry[3]} \n Birth Date: {entry[4]} \t Gender: {entry[5]} \n Occupation: {entry[6]}\t E-mail: {entry[8]}\n Address: {entry[7]} \n Contact No.: {entry[9]} \n\n\t Emergency Contact: \n Name: {entry[10]} \t Relation: {entry[11]} \n PhoneNo. : {entry[12]} \t E-mail: {entry[13]} \n\n\t COVID ASSESSMENT: \n Vaccination Status: {dataVacStat} "
+                    for entry in dataFound
+                ]
+            )
+    # message for found or no result
+            messagebox.showinfo("Result Found: ", f"There are {len(dataFound)} data that matched your queries. Here they are!! :\n\n{results}")
+        else:
+            messagebox.showinfo("No Result: ", "No Data Entries Found")
+            
 # run the main menu
 start=mainMenu()
 start.runMain()

@@ -236,7 +236,7 @@ class covidForm:
         getExposure=self.exposure.get()
         getCovidTest=self.covidTest.get()
         # raises error if no input detected
-        if not getFirstName or not getMiddleName or not getLastName or not getAge or not getBirthDate or not getGender or not getOccupation or not getAddress or not getEmail or not getContactInfo or not getContactPersonName or not getContactPersonRelation or not getContactPersonContactInfo or not getContactPersonEmail or not getVaccinationStatusr  or not getExposure or not getCovidTest:
+        if not getFirstName or not getMiddleName or not getLastName or not getAge or not getBirthDate or not getGender or not getOccupation or not getAddress or not getEmail or not getContactInfo or not getContactPersonName or not getContactPersonRelation or not getContactPersonContactInfo or not getContactPersonEmail:
             messagebox.showerror("Error: Please Fill All Entry")    
             return
         # create data and label to be written in csv file
