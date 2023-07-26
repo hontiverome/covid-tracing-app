@@ -200,8 +200,8 @@ class covidForm:
         covidTest_label = tkinter.Label(self.frame3_label, bg='#a3d1fb', text="Have you undergone a \ncovid-19 test the last 14 days?", font='Courier 11 bold', justify='center')
         covidTest_label.grid (column=1, row=11, padx=120)
         # create submit button
-        self.submit = tkinter.Button(self.window, bg='#ffffff', text="Submit", command=self.register)
-        self.submit.place(x=400, y=850)
+        self.submit = tkinter.Button(self.window, width='20', bg='#ffffff', text="Submit", font='Courier 10', command=self.register)
+        self.submit.place(x=345, y=860)
     # test function
     def run(self):
         self.window.mainloop()
