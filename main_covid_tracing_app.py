@@ -46,11 +46,10 @@ class mainMenu:
     # opens covid form
     def openForm(self):
         open=covidForm()
-        open.run
+        open.run()
         
     # runs main menu
     def runMain(self):
-        
         self.window.mainloop()
     # search method
     def searchFunction(self):
